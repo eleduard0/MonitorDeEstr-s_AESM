@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonitorDeEstrés_AESM.Vistas.PaginaPrincipal"
+             BackgroundColor="#f3f8ff">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Monitor de Estrés" HorizontalTextAlignment="Center" TextColor="#132E35" FontSize="36" Margin="50,50,50,15"/>
+            
+            <Label Text="Bienvenido, ingresa lo necesario para calcular tu estrés"
+                VerticalOptions="Start" Margin="15"
+                HorizontalOptions="CenterAndExpand" TextColor="#2D4A53" HorizontalTextAlignment="Center"/>
+            
+            <Label  Text="Frecuencia Cardiáca:" TextColor="#2D4A53" Margin="15,5,15,0" VerticalOptions="Start"  FontSize="18" />
+            <Entry  Placeholder="Ingresa tu frecuencia cardiaca" TextColor="#5a636a" Margin="10,5,20,0" Keyboard="Numeric" Text="{Binding FrecuenciaCardiaca}"/>
+            <Label  Text="Horas de sueño" TextColor="#2D4A53" Margin="15,5,15,0" VerticalOptions="Start"  FontSize="18"
+                    />
+            <Entry  Placeholder="Ingresa tus horas de sueño" TextColor="#5a636a" Margin="10,5,20,0" Keyboard="Numeric" Text="{Binding HorasSueno}"/>
+            
+            <Button Text="Calcular" BackgroundColor="#132E35" TextColor="#f3f8ff" Margin="15,0,15,0" CornerRadius="15" Command="{Binding Calcularestrescommand}"></Button>
+
+            <Label Text="{Binding NivelEstress}" TextColor="#2D4A53" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" FontSize="36" Margin="50,50,50,20" HorizontalTextAlignment="Center"/>
+            <Image Source="firmar.png"  WidthRequest="50" IsVisible="true"/>
+
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
